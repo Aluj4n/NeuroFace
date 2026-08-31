@@ -1,0 +1,266 @@
+.dashboard-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-content {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Glassmorphism Card Base */
+.dash-card {
+  background: var(--surface-color);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+/* 1. Profile Section */
+.profile-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 15px rgba(225, 229, 230, 0.2);
+}
+
+.profile-details h2 {
+  font-size: 1.4rem;
+  margin: 0 0 4px 0;
+  color: var(--text-primary);
+}
+
+.role-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0 0 4px 0;
+}
+
+.date-text {
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.logout-btn {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  transform: translateY(-2px);
+}
+
+/* 2. Status Section */
+.status-card h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-label {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.status-value {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* Badges */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge-puntual {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-tarde {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-noregistrado {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* 3. Action Buttons Section */
+.action-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.action-header h3 {
+  margin: 0 0 8px 0;
+  color: var(--text-primary);
+}
+
+.action-header p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.record-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  transition: var(--transition);
+}
+
+.record-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-entry {
+  background: #2E828B; /* Color principal de los botones actuales */
+  box-shadow: 0 4px 15px rgba(46, 130, 139, 0.3);
+}
+
+.btn-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 130, 139, 0.5);
+}
+
+.btn-exit {
+  background: #4a5568; /* Color gris secundario para salida */
+  box-shadow: 0 4px 15px rgba(74, 85, 104, 0.3);
+}
+
+.btn-exit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 85, 104, 0.5);
+  background: #2d3748;
+}
+
+/* 4. History Section */
+.history-section h3 {
+  margin: 0 0 16px 4px;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.history-card {
+  padding: 16px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.history-date {
+  font-weight: 600;
+  color: var(--text-primary);
+  min-width: 80px;
+}
+
+.history-details {
+  display: flex;
+  gap: 24px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-info {
+    flex-direction: column;
+  }
+  
+  .history-item {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .history-details {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
