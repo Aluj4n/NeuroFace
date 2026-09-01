@@ -1,0 +1,921 @@
+    /* =========================================================
+   NEUROFACE
+   GESTIÓN DE CUENTAS
+========================================================= */
+
+.gestion-cuentas {
+  width: 100%;
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 10px 20px 40px;
+
+  color: #eef6f8;
+
+  font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+========================================================= */
+
+.gestion-header {
+  width: 100%;
+
+  margin-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  gap: 14px;
+}
+
+
+.gestion-eyebrow {
+  color: #31b6d1;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 2.4px;
+}
+
+
+.gestion-header h1 {
+  margin: 5px 0 7px;
+
+  color: #f5fafc;
+
+  font-size: 35px;
+
+  font-weight: 700;
+
+  letter-spacing: -1.3px;
+}
+
+
+.gestion-header p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #8fa4af;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SESIÓN ADMINISTRATIVA
+========================================================= */
+
+.gestion-status {
+  padding: 9px 15px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  border:
+    1px solid rgba(47, 201, 135, 0.2);
+
+  border-radius: 999px;
+
+  color: #79dbac;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  background:
+    rgba(38, 170, 112, 0.07);
+}
+
+
+.gestion-status > span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #35d98c;
+
+  box-shadow:
+    0 0 10px
+    rgba(53, 217, 140, 0.7);
+}
+
+
+/* =========================================================
+   CONTENEDOR DEL FORMULARIO
+========================================================= */
+
+.gestion-form-wrapper {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+/* =========================================================
+   TARJETA PRINCIPAL
+========================================================= */
+
+.cuenta-form-card {
+  position: relative;
+
+  width: 100%;
+  max-width: 920px;
+
+  padding: 38px 42px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111c24 0%,
+      #0d171e 100%
+    );
+
+  box-shadow:
+    0 22px 55px
+    rgba(0, 0, 0, 0.22);
+
+  overflow: hidden;
+}
+
+
+/* brillo decorativo */
+
+.cuenta-form-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  top: -180px;
+  right: -150px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(24, 160, 190, 0.08);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CABECERA DE LA TARJETA
+========================================================= */
+
+.cuenta-form-header {
+  position: relative;
+
+  margin-bottom: 34px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+}
+
+
+.cuenta-step {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    1px solid rgba(50, 188, 216, 0.18);
+
+  border-radius: 12px;
+
+  color: #56c6dd;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  background:
+    rgba(47, 177, 204, 0.09);
+}
+
+
+.cuenta-form-header h2 {
+  margin: 0 0 5px;
+
+  color: #f4f9fb;
+
+  font-size: 23px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+
+.cuenta-form-header p {
+  margin: 0;
+
+  color: #80939e;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CAMPOS
+========================================================= */
+
+.gestion-field {
+  position: relative;
+
+  margin-bottom: 24px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+.gestion-field > label {
+  color: #c2d0d7;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.gestion-field > input,
+.gestion-password {
+  width: 100%;
+
+  min-height: 55px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 11px;
+
+  background: #091219;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.gestion-field > input {
+  padding:
+    0 17px;
+
+  outline: none;
+
+  color: #edf5f8;
+
+  font-family: inherit;
+
+  font-size: 14px;
+}
+
+
+.gestion-field > input:hover,
+.gestion-password:hover {
+  border-color:
+    rgba(69, 187, 211, 0.2);
+}
+
+
+.gestion-field > input:focus,
+.gestion-password:focus-within {
+  border-color: #2ba8c2;
+
+  background: #0b161d;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(43, 168, 194, 0.09);
+}
+
+
+.gestion-field input::placeholder {
+  color: #536873;
+}
+
+
+/* =========================================================
+   SELECTOR DE ROL
+========================================================= */
+
+.role-selector {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 14px;
+}
+
+
+.role-selector button {
+  min-height: 76px;
+
+  padding:
+    14px 17px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 12px;
+
+  color: #8da1ab;
+
+  text-align: left;
+
+  background: #09131a;
+
+  cursor: pointer;
+
+  transition:
+    0.2s ease;
+}
+
+
+.role-selector button:hover {
+  border-color:
+    rgba(55, 187, 214, 0.27);
+
+  background: #0c1920;
+
+  transform:
+    translateY(-1px);
+}
+
+
+.role-selector button.active {
+  border-color: #269db7;
+
+  color: #eef9fb;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(26, 138, 163, 0.2),
+      rgba(22, 104, 122, 0.09)
+    );
+
+  box-shadow:
+    0 0 0 1px
+    rgba(38, 157, 183, 0.08);
+}
+
+
+.role-letter {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 10px;
+
+  color: #58c7dc;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  background:
+    rgba(46, 170, 197, 0.11);
+}
+
+
+.role-selector button > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.role-selector strong {
+  color: inherit;
+
+  font-size: 12px;
+}
+
+
+.role-selector small {
+  color: #6c818c;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   NOMBRE + USUARIO
+========================================================= */
+
+.form-two-columns {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   CORREO GENERADO
+========================================================= */
+
+.correo-preview {
+  width: 100%;
+
+  margin:
+    -4px 0 24px;
+
+  padding:
+    14px 16px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border:
+    1px solid rgba(48, 180, 205, 0.13);
+
+  border-radius: 11px;
+
+  background:
+    rgba(27, 133, 155, 0.06);
+}
+
+
+.correo-preview > div:first-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.correo-preview span {
+  color: #738995;
+
+  font-size: 10px;
+}
+
+
+.correo-preview strong {
+  color: #61cade;
+
+  font-size: 13px;
+}
+
+
+.correo-domain {
+  padding:
+    6px 10px;
+
+  border-radius: 7px;
+
+  color: #55bed2;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+  background:
+    rgba(57, 180, 205, 0.08);
+}
+
+
+/* =========================================================
+   PASSWORD
+========================================================= */
+
+.gestion-password {
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+}
+
+
+.gestion-password input {
+  width: 100%;
+
+  height: 53px;
+
+  padding:
+    0 17px;
+
+  border: none;
+
+  outline: none;
+
+  color: #edf5f8;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  background: transparent;
+}
+
+
+.gestion-password input::placeholder {
+  color: #536873;
+}
+
+
+.gestion-password button {
+  height: 53px;
+
+  padding:
+    0 18px;
+
+  border: none;
+
+  color: #54bdd2;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+.gestion-password button:hover {
+  color: #78d4e6;
+}
+
+
+.field-help {
+  color: #657984;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   MENSAJE DE ERROR
+========================================================= */
+
+.gestion-error {
+  margin-bottom: 20px;
+
+  padding:
+    13px 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  border:
+    1px solid rgba(228, 80, 80, 0.22);
+
+  border-radius: 10px;
+
+  color: #ed8f8f;
+
+  background:
+    rgba(188, 50, 50, 0.075);
+
+  font-size: 11px;
+}
+
+
+.gestion-error > div {
+  width: 25px;
+  height: 25px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  background: #ce4f4f;
+}
+
+
+/* =========================================================
+   MENSAJE DE ÉXITO
+========================================================= */
+
+.gestion-success {
+  margin-bottom: 20px;
+
+  padding:
+    14px 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  border:
+    1px solid rgba(45, 198, 126, 0.18);
+
+  border-radius: 11px;
+
+  background:
+    rgba(35, 160, 104, 0.075);
+}
+
+
+.success-check {
+  width: 35px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 9px;
+
+  color: #75dfad;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  background:
+    rgba(46, 195, 128, 0.12);
+}
+
+
+.gestion-success > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.gestion-success strong {
+  color: #93e6bd;
+
+  font-size: 11px;
+}
+
+
+.gestion-success span {
+  color: #6f9b83;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   BOTÓN REGISTRAR
+========================================================= */
+
+.crear-cuenta-button {
+  width: 100%;
+
+  height: 58px;
+
+  margin-top: 4px;
+
+  padding:
+    0 22px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 750;
+
+  background:
+    linear-gradient(
+      135deg,
+      #127c96,
+      #1aa5c1
+    );
+
+  box-shadow:
+    0 12px 28px
+    rgba(20, 146, 173, 0.2);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+
+.crear-cuenta-button span {
+  font-size: 17px;
+}
+
+
+.crear-cuenta-button:hover:not(:disabled) {
+  transform:
+    translateY(-2px);
+
+  filter:
+    brightness(1.07);
+
+  box-shadow:
+    0 16px 35px
+    rgba(20, 146, 173, 0.27);
+}
+
+
+.crear-cuenta-button:active:not(:disabled) {
+  transform:
+    translateY(0);
+}
+
+
+.crear-cuenta-button:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (
+  max-width: 900px
+) {
+
+  .gestion-cuentas {
+    padding:
+      5px 10px 30px;
+  }
+
+
+  .cuenta-form-card {
+    max-width: 100%;
+
+    padding:
+      30px;
+  }
+
+}
+
+
+@media (
+  max-width: 700px
+) {
+
+  .gestion-header h1 {
+    font-size: 29px;
+  }
+
+
+  .form-two-columns {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .role-selector {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .correo-preview {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+}
+
+
+@media (
+  max-width: 480px
+) {
+
+  .cuenta-form-card {
+    padding:
+      23px 19px;
+
+    border-radius: 15px;
+  }
+
+
+  .cuenta-form-header h2 {
+    font-size: 20px;
+  }
+
+
+  .gestion-field > label {
+    font-size: 11px;
+  }
+
+
+  .gestion-field > input,
+  .gestion-password input {
+    font-size: 13px;
+  }
+
+}
